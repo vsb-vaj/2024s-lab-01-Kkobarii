@@ -8,8 +8,11 @@
 
 // Your code:
 export const parametrize = (input) => {
-
+    return input.toLowerCase().split(" ").join("-");
 };
+
+console.log("\n: parametrize");
+console.log(parametrize("Javascript is the best"));
 
 // 2 =================================
 // Write function that takes object and return sentence
@@ -19,8 +22,11 @@ export const parametrize = (input) => {
 
 // Your code:
 export const giveSentenceForPerson = (obj) => {
-
+    return `Hello ${obj.name} from ${obj.location}! It is nice to meet you! You look awesome for your ${obj.age}, young ${obj.position}!`;
 };
+
+console.log("\n: giveSentenceForPerson");
+console.log(giveSentenceForPerson({name: "Obi-wan", position: "Jedi", age: 40, location: "Starwars universe"}));
 
 // 3 =================================
 // Write function that takes string and replace all `a`, `e`, `i`, `o` with *
@@ -29,5 +35,8 @@ export const giveSentenceForPerson = (obj) => {
 
 // Your code:
 export const replace = (input) => {
-
+    return input.replace(/[aeio]/g, "*");
 };
+
+console.log("\n: replace");
+console.log(replace("Hello Javascript"));
